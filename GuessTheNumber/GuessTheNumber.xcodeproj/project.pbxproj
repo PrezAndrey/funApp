@@ -14,6 +14,9 @@
 		550695A829CD12CC0092137E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550695A729CD12CC0092137E /* Assets.xcassets */; };
 		550695AB29CD12CC0092137E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550695A929CD12CC0092137E /* LaunchScreen.storyboard */; };
 		55B4DF2029D6654E00672612 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4DF1F29D6654E00672612 /* CollectionViewController.swift */; };
+		55B4DF2329DB941E00672612 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4DF2229DB941E00672612 /* NumberCollectionViewCell.swift */; };
+		55B4DF2529DB950B00672612 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4DF2429DB950A00672612 /* MainViewController.swift */; };
+		55B4DF2729DBA34900672612 /* BallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B4DF2629DBA34900672612 /* BallCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		550695AA29CD12CC0092137E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550695AC29CD12CC0092137E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B4DF1F29D6654E00672612 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		55B4DF2229DB941E00672612 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		55B4DF2429DB950A00672612 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55B4DF2629DBA34900672612 /* BallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		5506959D29CD12CB0092137E /* GuessTheNumber */ = {
 			isa = PBXGroup;
 			children = (
+				55B4DF2129DB93FA00672612 /* Cells */,
 				55B4DF1F29D6654E00672612 /* CollectionViewController.swift */,
 				5506959E29CD12CB0092137E /* AppDelegate.swift */,
 				550695A029CD12CB0092137E /* SceneDelegate.swift */,
@@ -66,8 +73,18 @@
 				550695A729CD12CC0092137E /* Assets.xcassets */,
 				550695A929CD12CC0092137E /* LaunchScreen.storyboard */,
 				550695AC29CD12CC0092137E /* Info.plist */,
+				55B4DF2429DB950A00672612 /* MainViewController.swift */,
 			);
 			path = GuessTheNumber;
+			sourceTree = "<group>";
+		};
+		55B4DF2129DB93FA00672612 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				55B4DF2229DB941E00672612 /* NumberCollectionViewCell.swift */,
+				55B4DF2629DBA34900672612 /* BallCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B4DF2329DB941E00672612 /* NumberCollectionViewCell.swift in Sources */,
 				55B4DF2029D6654E00672612 /* CollectionViewController.swift in Sources */,
+				55B4DF2729DBA34900672612 /* BallCollectionViewCell.swift in Sources */,
 				550695A329CD12CB0092137E /* GuessViewController.swift in Sources */,
+				55B4DF2529DB950B00672612 /* MainViewController.swift in Sources */,
 				5506959F29CD12CB0092137E /* AppDelegate.swift in Sources */,
 				550695A129CD12CB0092137E /* SceneDelegate.swift in Sources */,
 			);

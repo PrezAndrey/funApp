@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743.0769230769231" y="9.9526066350710902"/>
+            <point key="canvasLocation" x="1677" y="-1027"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ei-UN-HPy">
@@ -98,12 +98,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XIP-cs-gu6" kind="relationship" relationship="rootViewController" id="aie-Wd-yFn"/>
+                        <segue destination="XIP-cs-gu6" kind="relationship" relationship="rootViewController" id="ssl-0U-UTk"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqB-TD-gro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.38461538461539" y="26.303317535545023"/>
+            <point key="canvasLocation" x="8" y="-235"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="Wm1-Dq-Zwa">
@@ -121,7 +121,7 @@
                             <inset key="sectionInset" minX="25" minY="0.0" maxX="25" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WD3-yw-avP">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="NumberCollectionViewCell" id="WD3-yw-avP" customClass="NumberCollectionViewCell" customModule="GuessTheNumber" customModuleProvider="target">
                                 <rect key="frame" x="25" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xRg-SI-Aih">
@@ -156,16 +156,41 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="jnZ-N7-sfm"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HOV-FU-s6R"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LD2-hN-0oV">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BallCollectionViewCell" id="LD2-hN-0oV" customClass="BallCollectionViewCell" customModule="GuessTheNumber" customModuleProvider="target">
                                 <rect key="frame" x="215" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6H8-xv-fPS">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicBall" translatesAutoresizingMaskIntoConstraints="NO" id="Ku6-j6-6Q0">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="112"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="nIR-Fb-orK"/>
+                                                <constraint firstAttribute="height" constant="112" id="yVJ-xd-fkb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magic ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wc-Aw-Nus">
+                                            <rect key="frame" x="0.0" y="112" width="150" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ku6-j6-6Q0" firstAttribute="top" secondItem="6H8-xv-fPS" secondAttribute="top" id="OO4-dU-UX4"/>
+                                        <constraint firstItem="Ku6-j6-6Q0" firstAttribute="leading" secondItem="6H8-xv-fPS" secondAttribute="leading" id="RNY-Hw-NVX"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ku6-j6-6Q0" secondAttribute="trailing" id="i5X-Qn-wJd"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="M9M-xi-ykM" kind="show" id="Xn0-Lw-xCm"/>
+                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SOP-IH-bzE">
                                 <rect key="frame" x="25" y="208" width="150" height="150"/>
@@ -209,14 +234,158 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJS-Yu-Bdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670.76923076923072" y="28.436018957345969"/>
+            <point key="canvasLocation" x="827.69230769230762" y="-234.59715639810426"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T81-80-Gs7">
+            <objects>
+                <viewController id="M9M-xi-ykM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0M-SV-TWn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="u8P-8c-Wxq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P6W-tK-b2Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4O-n6-uin" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="-347"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="wDH-4c-74w">
+            <objects>
+                <viewController id="ioC-9X-efU" customClass="MainViewController" customModule="GuessTheNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ei1-Bf-te4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j6h-TQ-2eX">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="JXh-lD-2eu"/>
+                                    <constraint firstAttribute="height" constant="763" id="pb6-uJ-CZu"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="10" id="xvt-rM-obd">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="estimatedItemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="y5d-Cg-el8">
+                                        <rect key="frame" x="25" y="25" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N5H-AO-s19">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guess" translatesAutoresizingMaskIntoConstraints="NO" id="cEb-hf-kI9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="112"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="112" id="4h4-fI-8vo"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Pyc-us-XHA"/>
+                                                        <constraint firstAttribute="width" constant="150" id="qFF-H4-pzU"/>
+                                                        <constraint firstAttribute="height" constant="112" id="wXr-l5-SbC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiJ-FI-tQE">
+                                                    <rect key="frame" x="0.0" y="112" width="150" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="38" id="G0p-GC-fzK"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Imm-9S-1CE"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="Jdn-8l-O7a"/>
+                                                        <constraint firstAttribute="width" constant="150" id="Oqe-kh-yDu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CiJ-FI-tQE" firstAttribute="leading" secondItem="N5H-AO-s19" secondAttribute="leading" id="3q3-xb-RgF"/>
+                                                <constraint firstAttribute="bottom" secondItem="CiJ-FI-tQE" secondAttribute="bottom" id="BPd-HT-ELv"/>
+                                                <constraint firstItem="cEb-hf-kI9" firstAttribute="top" secondItem="N5H-AO-s19" secondAttribute="top" id="S62-Da-jAO"/>
+                                                <constraint firstAttribute="trailing" secondItem="cEb-hf-kI9" secondAttribute="trailing" id="SzI-Ki-zG8"/>
+                                                <constraint firstAttribute="trailing" secondItem="CiJ-FI-tQE" secondAttribute="trailing" id="Wuu-uo-oNL"/>
+                                                <constraint firstItem="cEb-hf-kI9" firstAttribute="leading" secondItem="N5H-AO-s19" secondAttribute="leading" id="YSe-o5-QQ6"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CWE-Ss-waN">
+                                        <rect key="frame" x="215" y="25" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mMF-gG-PFx">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oQ9-iY-oZq">
+                                        <rect key="frame" x="25" y="200" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RrO-1h-naW">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6a4-Cv-B6U">
+                                        <rect key="frame" x="215" y="200" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a83-Pl-YhS">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sJM-kB-PWH">
+                                        <rect key="frame" x="25" y="375" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nUl-LZ-UKo">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EaA-YK-R4K">
+                                        <rect key="frame" x="215" y="375" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pml-fY-RIY">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ioC-9X-efU" id="IBZ-LX-5lh"/>
+                                    <outlet property="delegate" destination="ioC-9X-efU" id="T7N-2E-fDm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Vf-25-Iag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j6h-TQ-2eX" firstAttribute="bottom" secondItem="2Vf-25-Iag" secondAttribute="bottom" id="D2I-6i-LiZ"/>
+                            <constraint firstItem="j6h-TQ-2eX" firstAttribute="leading" secondItem="2Vf-25-Iag" secondAttribute="leading" id="NzW-Ak-v2Y"/>
+                            <constraint firstItem="j6h-TQ-2eX" firstAttribute="trailing" secondItem="2Vf-25-Iag" secondAttribute="trailing" id="VB9-1Z-UFr"/>
+                            <constraint firstItem="j6h-TQ-2eX" firstAttribute="top" secondItem="2Vf-25-Iag" secondAttribute="top" id="cUK-dG-MA9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fvd-kF-8yg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSZ-T8-PBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.53846153846155" y="705.21327014218002"/>
         </scene>
     </scenes>
     <resources>
         <image name="congratulations" width="300" height="168"/>
         <image name="guess" width="1000" height="1000"/>
+        <image name="magicBall" width="1506" height="1500"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
